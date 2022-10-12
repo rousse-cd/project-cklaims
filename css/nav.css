@@ -1,0 +1,141 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box; /*lo elementos no se salgan del contenedor*/
+}
+
+.menu{
+    background-color: #21216c;
+    height: 75px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid white;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, .6);
+    
+}
+.logo {
+    color: #fff7c9;
+    font-size: 35px;
+    padding: 0 80px;
+    font-weight: bold;
+    font-family: 'Strait', sans-serif;
+}
+.menu_items{
+    margin-right: 30px;
+    display: flex;
+}
+.menu_items li{
+    border-radius: 3px;
+    margin: 0 5px;
+    /*prueba*/
+    /*-------------*/
+    /**/
+    display: inline-block;
+    position: relative;
+    transition: .3s linear;
+    z-index: 1000;
+
+}
+.menu_items li a{
+    padding: 7px 13px;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    text-transform: uppercase;
+    font-family: 'Nunito Sans', sans-serif;
+    color: white;
+    cursor: pointer;
+    /**/
+    transition: .3s linear;
+}
+
+.menu ul li:hover{
+    transform: scale(1.1);
+}
+
+.menu ul li a:hover{
+    color: #fff7c9;
+    transform: scale(1.1);
+}
+li a:hover, li a.active {
+    background-color: rgba(0, 0, 0, .3);
+    transition: 4s;
+    
+}
+.checkbtn{
+    font-size: 30px;
+    color: #fff7c9;
+    float: right;
+    line-height: 75px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+/**/
+ul.show{
+    top: 65px;
+}
+/**/
+
+@media screen and (max-width: 952px){
+    .logo {
+        font-size: 30px;
+        padding-left: 35px;
+    }
+    .menu_items li a{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 858px){
+    .menu{
+        height: 65px;
+    }
+    .checkbtn{
+        display: inline-flex;
+    }
+    .menu_items{
+        position: fixed;
+        width: 100vw;
+        height: calc(100% - 65px);
+        background: #101642;
+        top: -100vh;
+        text-align: center;
+        transition: all .4s;
+        flex-direction: column;
+    }
+    .menu_items li{
+        margin: 30px 0 0 0;
+        line-height: 30px;
+    }
+    .menu_items li:hover {
+        background: none;
+    }
+    .menu_items li a {
+        font-size: 20px;
+        color: white;
+        font-weight: bold;
+    }
+    .menu_items li a:hover {
+        color: #21216c;
+    }
+    .logo{
+        font-size: 25px;
+        padding-left: 35px;
+    }
+}
+@media screen  and (max-width : 858px) and (orientation:landscape) {
+    .menu_items li{
+        margin: 5px 0 0 0;
+    }
+    .menu_items{
+        overflow: scroll;
+        height: calc(100% - 65px);
+    }
+}
