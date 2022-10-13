@@ -7,7 +7,7 @@
 }
 
 .menu{
-    background-color: #21216c;
+    background-color: #3d1d71e8;
     height: 75px;
     width: 100%;
     display: flex;
@@ -15,6 +15,7 @@
     align-items: center;
     border-bottom: 1px solid white;
     box-shadow: 5px 0 10px rgba(0, 0, 0, .6);
+    position: fixed; /* mantiene fijado el header*/
     
 }
 .logo {
@@ -104,7 +105,7 @@ ul.show{
         position: fixed;
         width: 100vw;
         height: calc(100% - 65px);
-        background: #101642;
+        background: #433e49e8;
         top: -100vh;
         text-align: center;
         transition: all .4s;
@@ -123,7 +124,7 @@ ul.show{
         font-weight: bold;
     }
     .menu_items li a:hover {
-        color: #21216c;
+        color: #3d1d71e8;
     }
     .logo{
         font-size: 25px;

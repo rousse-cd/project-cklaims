@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Responsive</title>
     <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/slide.css">
+    <link rel="stylesheet" href="css/claims.css">
+    
     <link href="https://fonts.googleapis.com/css2?family=Strait&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/nav.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">-->
     <script src="https://kit.fontawesome.com/35de4c0fd7.js" crossorigin="anonymous"></script>
     <script src="js/app_nav.js"></script>
 </head>
@@ -30,6 +32,51 @@
             <i class="fa-solid fa-bars"></i>
         </label>
     </nav>
+    <!-- slide -->
+    <div id="slide">
+        <div class="container-all">
+            <input type="radio" id="1" name="image-slide" hidden/>
+            <input type="radio" id="2" name="image-slide" hidden/>
+            <input type="radio" id="3" name="image-slide" hidden/>
+            <input type="radio" id="4" name="image-slide" hidden/>
+
+            <div class="slide">
+                <div class="item-slide"><img src="images/img-slide/1.jpg" class="i-sli"></div>
+                <div class="item-slide"><img src="images/img-slide/2.jpg" class="i-sli"></div>
+                <div class="item-slide"><img src="images/img-slide/3.jpg" class="i-sli"></div>
+                <div class="item-slide"><img src="images/img-slide/4.jpg" class="i-sli"></div>
+             </div>
+
+            <div class="pagination">
+                <label class="pagination-item" for="1"><img src="images/img-slide/1.jpg" class="i-sli"></label>
+                <label class="pagination-item" for="2"><img src="images/img-slide/2.jpg" class="i-sli"></label>
+                <label class="pagination-item" for="3"><img src="images/img-slide/3.jpg" class="i-sli"></label>
+                <label class="pagination-item" for="4"><img src="images/img-slide/4.jpg" class="i-sli"></label>
+            </div>
+        </div>
+    </div>
+    <!-- presenta tu reclamo -->
+        <div class="claims_contenedor">
+            <h2 class="subtitulo">Registra tu reclamo</h2>
+            <div class="contenedor-claims">
+                <img class="ck" src="images/b1.jpg">
+                <div class="checklist-servicio">
+                    <div class="service">
+                        <h3 class="n-service"><span class="number">1</span>Reutiliza</h3>
+                        <p>Reulizamos la madera que no le den un uso fijo, recolectandola y dandole un nuevo uso.</p>
+                    </div>
+                    <div class="service">
+                        <h3 class="n-service"><span class="number">2</span>Reduce</h3>
+                        <p>Reducimos la tala de arboles y contribuimos al medio ambiente.</p>
+                    </div>
+                    <div class="service">
+                        <h3 class="n-service"><span class="number">3</span>Revive</h3>
+                        <p>Revive los bueno momentos con la musica.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     
 </body>
 </html>
