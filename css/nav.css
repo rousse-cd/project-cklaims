@@ -5,9 +5,11 @@
     list-style: none;
     box-sizing: border-box; /*lo elementos no se salgan del contenedor*/
 }
-
+body{
+    background:#eee;
+}
 .menu{
-    background-color: #3d1d71e8;
+    background-color: #fff;
     height: 75px;
     width: 100%;
     display: flex;
@@ -19,7 +21,7 @@
     
 }
 .logo {
-    color: #fff7c9;
+    color: black;
     font-size: 35px;
     padding: 0 80px;
     font-weight: bold;
@@ -28,6 +30,7 @@
 .menu_items{
     margin-right: 30px;
     display: flex;
+    
 }
 .menu_items li{
     border-radius: 3px;
@@ -48,7 +51,7 @@
     display: block;
     text-transform: uppercase;
     font-family: 'Nunito Sans', sans-serif;
-    color: white;
+    color: #666;
     cursor: pointer;
     /**/
     transition: .3s linear;
@@ -59,17 +62,17 @@
 }
 
 .menu ul li a:hover{
-    color: #fff7c9;
+    color: #7846bf;
     transform: scale(1.1);
-}
+}/*
 li a:hover, li a.active {
     background-color: rgba(0, 0, 0, .3);
     transition: 4s;
     
-}
+}*/
 .checkbtn{
     font-size: 30px;
-    color: #fff7c9;
+    color: #59338f;
     float: right;
     line-height: 75px;
     margin-right: 40px;

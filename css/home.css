@@ -1,0 +1,65 @@
+
+.home{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    padding-top: 80px;
+    background:#f1e9fc;
+    height: 720px;
+    width: 100%;
+    
+}
+.home .content{
+    /*flex:1 0 45rem;*/ /*prueba*/
+    margin-left: 10%; 
+    width: 40%;
+}
+
+.home .image{
+    /*flex:1 1 45rem;*/ /*prueba*/
+    width: 40%;
+}
+
+.home .image img{
+    width: 100%;
+}
+
+.home .content h3{
+    font-size: 40px;
+    color:#555;
+    line-height: 1;
+}
+
+.home .content p{
+    font-size: 20px;
+    color:#777;
+    line-height: 1.5;
+    padding:1rem 0;
+}
+
+.home .cloud{
+    position: absolute;
+    bottom: 0; right: 0; left: 0;
+    height: 9rem;
+    background-size: 2500rem 18rem;
+    background:url(../images/cloud.png) repeat-x;
+    animation: cloud 10s linear infinite;
+}
+
+@keyframes cloud{
+    0%{
+        background-position-x: 0rem;
+    }
+    100%{
+        background-position-x: -250rem;
+    }
+}
+
+.home .cloud-1{
+    opacity: .5;
+    height:10rem;
+    background-size: 250rem 20rem;
+    animation-direction: reverse;
+    animation-duration: 15s;
+}
