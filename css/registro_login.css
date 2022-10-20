@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*#############################################################*/
+
+body {
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+.contenedor1{
+    height: 70px;
+}
+.login-container {
+    height: 43.75em;
+    width: 86%;
+    margin: 1em auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.login-info-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 3%;
+    background-color: #f8f3ff;
+}
+
+.title {
+    color: #607d8b;
+    font-weight: 600;
+    font-size: 30px;
+    text-transform: uppercase;
+    /*margin-bottom: 10px;*/
+    border-bottom: 4px solid #5a2084;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+/*/////////////////////////////////////////////////////*/
+
+
+/*///////////////////////////////////////////////////////*/
+.formBx form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+
+  }
+  .formBx form .user-details .inputBx span{
+    float: left;
+    
+  }
+.formBx .inputBx{
+    margin-bottom: 20px;
+}
+.formBx .inputBx input{
+    width: 40%;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #607d8b;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #607d8b;
+    background: transparent;
+    border-radius: 5px;
+}
+/**/
+.inputs-container{
+    padding: 10%;
+}
+form .user-details .inputBx{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+form .inputBx span.details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.user-details .inputBx input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+  .user-details .inputBx input:focus,
+  .user-details .inputBx input:valid{
+    border-color: #9b59b6;
+}
+  /**/
+.formBx .inputBx input:hover {
+    border: 2px solid #674baf
+}
+.formBx .inputBx input[type="submit"]{
+    background: #674baf;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+/*
+.formBx .inputBx input [type="submit"] :hover{
+    background-color: #f53677;
+}*/
+/**/
+form .gender-details{
+    align-items: center;
+    margin: auto;
+    width: 80%;
+}
+form .gender-details .gender-title{
+    font-size: 20px;
+    font-weight: 500;
+}
+form .category{
+     display: flex;
+     width: 80%;
+     margin: 14px 0 ;
+     justify-content: space-between;
+}
+form .category label{
+     display: flex;
+     align-items: center;
+     cursor: pointer;
+     margin-left: 10px;
+}
+form .category label .dot{
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background: #d9d9d9;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two,
+#dot-3:checked ~ .category label .three{
+     background: #9b59b6;
+     border-color: #d9d9d9;
+}
+form input[type="radio"]{
+     display: none;
+}
+.image-container {
+    width: 50%;
+    height: 100%;
+    background-color: #eadbff;
+    box-sizing: border-box;
+}
+.image-container img{
+    width: 100%;
+    padding: 10%;
+}
+@media screen and (max-width: 1000px) {
+    .login-container {
+        width: 70%;
+        margin-top: 0.5rem;
+    }
+    .login-info-container {
+        width: 100%;
+        border-radius: 5px;
+    }
+    
+    .image-container {
+        display: none;
+    }  
+}
+
+@media screen and (max-width: 650px) {
+    .login-container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .login-container {
+        height: 90%;
+    }
+
+    .social-login {
+        flex-direction: column;
+        align-items: center;
+        height: 30%;
+    }
+
+    .login-info-container > p {
+        margin: 0;
+    }
+}
+
+
+
+
+
+
+
