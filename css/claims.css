@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     /*background-color: #fff7c9;*/
 }
 
@@ -133,7 +133,7 @@ body {
     flex-wrap: wrap;
     gap:1rem;
     
-    /*padding-top: 2rem;*/
+    padding-top: 2rem;
 }
 
 .about .row .content .icons-container .icons{

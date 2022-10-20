@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./css/registro_login.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Strait&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/35de4c0fd7.js" crossorigin="anonymous"></script>
+    <script src="js/app_nav.js"></script>
+    <title>Login</title>
+</head>
+<body>
+    <nav class="menu">
+        <label class="logo"> CKlaims</label>
+        <ul class="menu_items">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Preguntas frecuentes</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="login.html"><label for="user" class="userkbtn">
+                <i class="fa-regular fa-user"></i>
+            </label></a></li>
+        </ul>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+    </nav>
+
+    <div class="contenedor1"></div>
+    <!-- login -->
+
+    <div class="login-container">
+        <div class="login-info-container">
+            <div class="formBx">
+                <h2 class="title">Registro</h2>
+                <form class="inputs-container">
+
+
+                    <div class="user-details">
+                        <div class="inputBx">
+                          <span class="details">Nombres</span>
+                          <input type="text" placeholder="Ingresa tu nombre" required>
+                        </div>
+                        <div class="inputBx">
+                            <span class="details">Apellidos</span>
+                            <input type="text" placeholder="Ingresa tu apellido" required>
+                          </div>
+                        <div class="inputBx">
+                            <span class="details">Teléfono</span>
+                            <input type="text" placeholder="+51 999 999 999" required>
+                          </div> 
+                          <!---
+                        <div class="inputBx">
+                          <span class="details">Usuario</span>
+                          <input type="text" placeholder="Enter your username" required>
+                        </div>--->
+                        <div class="inputBx">
+                          <span class="details">Email</span>
+                          <input type="text" placeholder="Ingresa email" required>
+                        </div>
+                        <div class="inputBx">
+                          <span class="details">Contraseña</span>
+                          <input type="password" placeholder="Ingresa tu contraseña" required>
+                        </div>
+                        <div class="inputBx">
+                          <span class="details">Confirmar contraseña</span>
+                          <input type="password" placeholder="Confirma tu contraseña" required>
+                        </div>
+                      </div>
+                      <div class="gender-details">
+                        <input type="radio" name="gender" id="dot-1">
+                        <input type="radio" name="gender" id="dot-2">
+                        <input type="radio" name="gender" id="dot-3">
+                        <span class="gender-title">Género</span>
+                        <div class="category">
+                            <label for="dot-1">
+                               <span class="dot one"></span>
+                               <span class="gender">Hombre</span>
+                            </label>
+                            <label for="dot-2">
+                               <span class="dot two"></span>
+                               <span class="gender">Mujer</span>
+                            </label>
+                            <label for="dot-3">
+                               <span class="dot three"></span>
+                               <span class="gender">Otro</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="inputBx">
+                        <a href="login.html"><input type="submit" value="Registrar" name=""></a>
+                    </div>
+
+
+
+
+                    
+                   
+                </form>
+                
+            </div>
+        </div>   
+        <div class="image-container">
+            <img src="images/login.svg">
+         </div>   
+    </div>
+</body>
+</html>

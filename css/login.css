@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*#############################################################*/
+
+body {
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+.contenedor1{
+    height: 70px;
+}
+.login-container {
+    height: 43.75em;
+    width: 86%;
+    margin: 1em auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.login-info-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 10%;
+    background-color: #f8f3ff;
+}
+/*
+.image-container {
+    padding: 2rem;
+    width: 50%;
+    background-color: var(--image-bg);
+    box-sizing: border-box;
+}
+*/
+.title {
+    color: #607d8b;
+    font-weight: 600;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #5a2084;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+/*---------------------------------------------*/
+.image-container {
+    width: 50%;
+    height: 100%;
+    background-color: #eadbff;
+    box-sizing: border-box;
+}
+.image-container img{
+    width: 100%;
+    padding: 10%;
+}
+/*------------------------------------------------*/
+
+.formBx .inputBx{
+    margin-bottom: 20px;
+}
+.formBx .inputBx input{
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #607d8b;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #607d8b;
+    background: transparent;
+    border-radius: 5px;
+}
+.formBx .inputBx input:hover {
+    border: 2px solid #674baf
+}
+.formBx .inputBx input[type="submit"]{
+    background: #674baf;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+.formBx .inputBx input [type="submit"] :hover{
+    background-color: #f53677;
+}
+ .formBx .remember{
+    margin-bottom: 10px;
+    color: #607d8b;
+    font-weight: 400;
+    font-size: 14px;
+}
+.formBx .inputBx p{
+    color: #607d8b;
+}
+.formBx .inputBx p a{
+    color: #ff4584;
+}
+.span {
+    color: #5a2084;
+    font-weight: 600;
+    cursor: pointer;
+}
+.formBx h3{
+    color: #607d8b;
+    text-align: center;
+    font-weight: 500;
+}
+.formBx .sci{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+.formBx .sci li{
+    list-style: none;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #607d8b;
+    border-radius: 50%;
+    margin: 0 7px;
+    cursor: pointer;
+}
+.formBx .sci li a{
+    color: #fff;
+}
+.formBx .sci li:hover{
+    background: #230d33;
+}
+.formBx .sci li img{
+    transform: scale(0.5);
+    filter: invert(1);
+}
+
+
+@media screen and (max-width: 1000px) {
+    .login-container {
+        width: 70%;
+        margin-top: 0.5rem;
+    }
+    .login-info-container {
+        width: 100%;
+        border-radius: 5px;
+    }
+    
+    .image-container {
+        display: none;
+    }  
+}
+
+@media screen and (max-width: 650px) {
+    .login-container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .login-container {
+        height: 90%;
+    }
+
+    .social-login {
+        flex-direction: column;
+        align-items: center;
+        height: 30%;
+    }
+
+    .login-info-container > p {
+        margin: 0;
+    }
+}
+
+
+
+
+
+
+
