@@ -5,7 +5,7 @@
     flex-wrap: wrap;
     gap:1.5rem;
     padding-top: 80px;
-    background:#ddc9fa;
+    background:#f1e9fc;
     height: 720px;
     width: 100%;
     
@@ -18,11 +18,11 @@
 
 .home .image{
     /*flex:1 1 45rem;*/ /*prueba*/
-    width: 30%;
+    width: 40%;
 }
 
 .home .image img{
-    width: 100%;
+    width: 450px;
 }
 
 .home .content h3{
