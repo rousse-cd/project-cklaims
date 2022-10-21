@@ -21,6 +21,7 @@ body {
     display: flex;
     justify-content: space-between;
     overflow: hidden;
+    
 }
 
 .login-info-container {
@@ -31,6 +32,7 @@ body {
     text-align: center;
     padding-top: 3%;
     background-color: #f8f3ff;
+    
 }
 
 .title {
@@ -42,6 +44,7 @@ body {
     border-bottom: 4px solid #5a2084;
     display: inline-block;
     letter-spacing: 1px;
+    
 }
 
 /*/////////////////////////////////////////////////////*/
@@ -54,6 +57,8 @@ body {
     justify-content: space-between;
     margin: 20px 0 12px 0;
 
+    
+
   }
   .formBx form .user-details .inputBx span{
     float: left;
@@ -61,6 +66,7 @@ body {
   }
 .formBx .inputBx{
     margin-bottom: 20px;
+    
 }
 .formBx .inputBx input{
     width: 40%;
@@ -76,11 +82,13 @@ body {
 }
 /**/
 .inputs-container{
-    padding: 10%;
+    padding: 9%;
+    
 }
 form .user-details .inputBx{
     margin-bottom: 15px;
     width: calc(100% / 2 - 20px);
+    
 }
 form .inputBx span.details{
     display: block;
@@ -169,6 +177,11 @@ form input[type="radio"]{
     width: 100%;
     padding: 10%;
 }
+
+.inputBx a h4{
+    color: #ff4584;
+}
+
 @media screen and (max-width: 1000px) {
     .login-container {
         width: 70%;
