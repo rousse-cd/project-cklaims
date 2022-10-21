@@ -146,12 +146,12 @@ body {
 
 .about .row .content .icons-container .icons i{
     border-radius: 50%;
-    background: var(--bg);
-    color:var(--main-color);
-    height: 20px;
-    width: 50px;
+    background: #c9bfcf;
+    color: #6b38b2;
+    height: 5rem;
+    width: 5rem;
     line-height: 5rem;
-    font-size: 20px;
+    font-size: 2rem;
 }
 
 .about .row .content .icons-container .icons h3{
