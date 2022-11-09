@@ -41,7 +41,7 @@
 .home .cloud{
     position: absolute;
     bottom: 0; right: 0; left: 0;
-    height: 30rem;
+    height: 9rem;
     background-size: 2500rem 18rem;
     background:url(../images/cloud.png) repeat-x;
     animation: cloud 10s linear infinite;
@@ -58,7 +58,7 @@
 
 .home .cloud-1{
     opacity: .5;
-    height:34rem;
+    height:10rem;
     background-size: 250rem 20rem;
     animation-direction: reverse;
     animation-duration: 15s;
