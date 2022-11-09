@@ -15,6 +15,7 @@
     <script src="js/app_nav.js"></script>
     <title>Registro Login</title>
 </head>
+
 <body>
     <nav class="menu">
         <label class="logo"> CKlaims</label>
@@ -47,16 +48,16 @@
 
                     <div class="user-details">
                         <div class="inputBx">
-                          <span class="details">Nombres</span>
-                          <input type="text" placeholder="Ingresar nombre" required>
+                          <span class="details">Usuario</span>
+                          <input type="text" placeholder="Ingresar tu usuario" name="usuario" required="" maxlength="15">
                         </div>
                         <div class="inputBx">
-                            <span class="details">Apellidos</span>
-                            <input type="text" placeholder="Ingresar apellido" required>
-                          </div>
-                        <div class="inputBx">
+                          <span class="details">Nombres y apellidos</span>
+                          <input type="text" placeholder="Ingresar tus nombres y apellidos" name="nombre" required="" pattern="[a-zA-Zá-zÁ-Z]+" maxlength="50" onkeydown="if(this.value.length == /^[a-zA-ZÀ-ÿ\s]{1,40}$/) return false">
+                        </div>
+                          <div class="inputBx">
                             <span class="details">Teléfono</span>
-                            <input type="text" placeholder="+51 999 999 999" required>
+                            <input type="number" placeholder="+51 999 999 999" id="telefono" maxlength="9" name="telefono"  oninput="maxlengthNumber(this);">
                           </div> 
                           <!---
                         <div class="inputBx">
@@ -65,15 +66,15 @@
                         </div>--->
                         <div class="inputBx">
                           <span class="details">Email</span>
-                          <input type="text" placeholder="Ingresar email" required>
+                          <input type="text" placeholder="Ingresar email" id="correo" name="correo" minlength="10" maxlength="50" required onkeyup="validar_correo">
+                        </div>
+                        <div class="inputBx">
+                          <span class="details">DNI</span>
+                          <input type="number" placeholder="Ingresar DNI" name="dni" required maxlength="8" oninput="maxlengthNumber(this);">
                         </div>
                         <div class="inputBx">
                           <span class="details">Contraseña</span>
-                          <input type="password" placeholder="Ingresar contraseña" required>
-                        </div>
-                        <div class="inputBx">
-                          <span class="details">Confirmar contraseña</span>
-                          <input type="password" placeholder="Confirmar contraseña" required>
+                          <input type="password" placeholder="Ingresar contraseña" required minlength="8" maxlength="15">
                         </div>
                       </div>
                       <div class="gender-details">
@@ -116,5 +117,25 @@
             <img src="images/login.svg">
          </div>   
     </div>
+    <script>
+      const expresion = /[a-zA-Z0-9._-]+\@(hotmail|outlook|gmail|certus)\.(com|es)/;
+      function validar_correo(){
+        const correo_form = document.getElementById('correo').value;
+        const validar = expresion.test(correo_form);
+        if (validar === true) {
+          $('correo').removeClass('is-invalid').addClass('is-valid');
+        } else {
+          $('correo').addClass('is-invalid');
+        }
+      }
+    </script>
+    <script>
+      function maxlengthNumber (obj){
+          console.log(obj.value);
+          if(obj.value.length > obj.maxLength){
+              obj.value = obj.value.slice(0, obj.maxLength);
+          }
+      }
+  </script>
 </body>
 </html>
