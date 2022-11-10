@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./css/register_login.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Strait&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/35de4c0fd7.js" crossorigin="anonymous"></script>
+    <script src="js/app_nav.js"></script>
+    <title>Registro Login</title>
+</head>
+
+<body>
+    <nav class="menu">
+        <label class="logo"> CKlaims</label>
+        <ul class="menu_items">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="Nosotros.html">Nosotros</a></li>
+            <li><a href="preguntas_frecuentes.html">Preguntas frecuentes</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="login.html"><label for="user" class="userkbtn">
+                <i class="fa-regular fa-user"></i>
+            </label></a></li>
+        </ul>
+    
+
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+    </nav>
+
+    <div class="contenedor1"></div>
+    <!-- login -->
+
+    <div class="container">
+      <div class="title">Registro de usuarios</div>
+      <div class="content">
+        <form action="#">
+          <div class="user-details">
+            <div class="input-box">
+              <span class="details">Nombres</span>
+              <input type="text" placeholder="Ingresa tu nombre" name="usuario" maxlength="15" required>
+            </div>
+            <div class="input-box">
+              <span class="details">Apellidos</span>
+              <input type="text" placeholder="Ingresa tu apellido" maxlength="15" required>
+            </div>
+            <div class="input-box">
+              <span class="details">Usuario</span>
+              <input type="text" placeholder="Ingresar tu usuario" name="usuario" maxlength="15" required>
+            </div>
+            <div class="input-box">
+              <span class="details">Email</span>
+              <input type="text" placeholder="Ingresar email" id="correo" name="correo" minlength="10" maxlength="50" onkeyup="validar_correo" required>
+            </div>
+            <div class="input-box">
+              <span class="details">Contraseña</span>
+              <input type="password" placeholder="Ingresar contraseña" minlength="8" maxlength="15" required>
+            </div>
+            <div class="input-box">
+              <span class="details">Confirmar contraseña</span>
+              <input type="password" placeholder="Ingresar contraseña" minlength="8" maxlength="15" required>
+            </div>
+            <div class="input-box">
+              <span class="details">DNI</span>
+              <input type="number" placeholder="Ingresar DNI" name="dni" required maxlength="8" oninput="maxlengthNumber(this);" required>
+            </div>
+            <div class="input-box">
+              <span class="details">Telefóno</span>
+              <input type="number" placeholder="+51 999 999 999" id="telefono" maxlength="9" name="telefono"  oninput="maxlengthNumber(this);" required>
+            </div>
+          </div>
+          <div class="gender-details">
+            <input type="radio" name="gender" id="dot-1">
+            <input type="radio" name="gender" id="dot-2">
+            <input type="radio" name="gender" id="dot-3">
+            <span class="gender-title">Género</span>
+            <div class="category">
+                <label for="dot-1">
+                   <span class="dot one"></span>
+                   <span class="gender">Hombre</span>
+                </label>
+                <label for="dot-2">
+                   <span class="dot two"></span>
+                   <span class="gender">Mujer</span>
+                </label>
+                <label for="dot-3">
+                   <span class="dot three"></span>
+                   <span class="gender">Otro</span>
+                </label>
+            </div>
+          </div>
+            <div class="button">
+
+              <input type="submit" value="Registrar" name=""><br><br>
+              <a href="login.html" class="btn"><h4>Ya tengo cuenta</h4></a>
+              
+          </div>
+
+
+
+
+                    
+                   
+                </form>
+                
+            </div>
+        </div>     
+    </div>
+    <script>
+      const expresion = /[a-zA-Z0-9._-]+\@(hotmail|outlook|gmail|certus)\.(com|es)/;
+      function validar_correo(){
+        const correo_form = document.getElementById('correo').value;
+        const validar = expresion.test(correo_form);
+        if (validar === true) {
+          $('correo').removeClass('is-invalid').addClass('is-valid');
+        } else {
+          $('correo').addClass('is-invalid');
+        }
+      }
+    </script>
+    <script>
+      function maxlengthNumber (obj){
+          console.log(obj.value);
+          if(obj.value.length > obj.maxLength){
+              obj.value = obj.value.slice(0, obj.maxLength);
+          }
+      }
+  </script>
+</body>
+</html>
