@@ -3,10 +3,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins',sans-serif;
 }
 body{
   height: 100vh;
+  font-family: 'Poppins', sans-serif;
+
+
   /*display: flex;
   justify-content: center;
   align-items: center;
@@ -28,23 +30,17 @@ body{
   padding: 10px;
   margin: auto;
   padding: 3%;
+  font-family: 'Poppins',sans-serif;
   
 }
 .container .title{
   font-size: 25px;
   font-weight: 500;
-  
+  border-bottom: 4px solid #5a2084;
+  display: inline-block;
+  letter-spacing: 1px;
 }
-.container .title::before{
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 3px;
-  width: 30px;
-  border-radius: 5px;
-  background: linear-gradient(135deg, #71b7e6, #9b59b6);
-}
+
 .content form .user-details{
   display: flex;
   flex-wrap: wrap;
@@ -111,7 +107,7 @@ form .input-box span.details{
  }
  form .button{
    height: 45px;
-   margin: 35px 0
+   margin: 35px 0;
  }
  
  form .button input{
@@ -138,6 +134,7 @@ form .input-box span.details{
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 20px 0 12px 0;
+    font-family: 'Poppins',sans-serif;
     
   }
   form .claims-details .input-box-1{
@@ -202,6 +199,12 @@ form .input-box span.details{
   border: 1px solid #ccc;
   border-bottom-width: 2px;
   transition: all 0.3s ease;
+}
+
+.button a h4{
+  color: #ff4584;
+  text-decoration: none;
+  text-align: center;
 }
 
 
