@@ -5,6 +5,9 @@
     list-style: none;
     box-sizing: border-box; /*lo elementos no se salgan del contenedor*/
 }
+a{
+    text-decoration: none;
+}
 body{
     background:#eee;
 }
