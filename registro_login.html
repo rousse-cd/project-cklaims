@@ -43,21 +43,21 @@
         <div class="login-info-container">
             <div class="formBx">
                 <h2 class="title">Registro</h2>
-                <form class="inputs-container">
+                <form class="inputs-container" id="form" >
 
 
                     <div class="user-details">
                         <div class="inputBx">
                           <span class="details">Usuario</span>
-                          <input type="text" placeholder="Ingresar tu usuario" name="usuario" required="" maxlength="15">
+                          <input type="text" id="usuario" placeholder="Ingresar tu usuario" name="usuario" required="" maxlength="15">
                         </div>
                         <div class="inputBx">
                           <span class="details">Nombres y apellidos</span>
-                          <input type="text" placeholder="Ingresar tus nombres y apellidos" name="nombre" required="" pattern="[a-zA-Zá-zÁ-Z]+" maxlength="50" onkeydown="if(this.value.length == /^[a-zA-ZÀ-ÿ\s]{1,40}$/) return false">
+                          <input type="text" id="nombre" placeholder="Ingresar tus nombres y apellidos" onkeypress="return SoloLetras(event);" name="nombre" required="" pattern="[a-zA-Zá-zÁ-Z]+" maxlength="50" onkeydown="if(this.value.length == /^[a-zA-ZÀ-ÿ\s]{1,40}$/) return false">
                         </div>
                           <div class="inputBx">
                             <span class="details">Teléfono</span>
-                            <input type="number" placeholder="+51 999 999 999" id="telefono" maxlength="9" name="telefono"  oninput="maxlengthNumber(this);">
+                            <input type="number" id="telefono" placeholder="+51 999 999 999"  maxlength="9" name="telefono"  oninput="maxlengthNumber(this);" required>
                           </div> 
                           <!---
                         <div class="inputBx">
@@ -66,21 +66,21 @@
                         </div>--->
                         <div class="inputBx">
                           <span class="details">Email</span>
-                          <input type="text" placeholder="Ingresar email" id="correo" name="correo" minlength="10" maxlength="50" required onkeyup="validar_correo">
-                        </div>
-                        <div class="inputBx">
-                          <span class="details">DNI</span>
-                          <input type="number" placeholder="Ingresar DNI" name="dni" required maxlength="8" oninput="maxlengthNumber(this);">
+                          <input type="text" id="correo" placeholder="Ingresar email"  onkeydown="validation()" name="correo" minlength="10" maxlength="50" required >
                         </div>
                         <div class="inputBx">
                           <span class="details">Contraseña</span>
-                          <input type="password" placeholder="Ingresar contraseña" required minlength="8" maxlength="15">
+                          <input type="password" id="contraseña" placeholder="Ingresar contraseña" required minlength="8" maxlength="15">
+                        </div>
+                        <div class="inputBx">
+                          <span class="details">Confirmar Contraseña</span>
+                          <input type="password" id="confirmar" placeholder="Ingresar nuevamente la contraseña" required minlength="8" maxlength="15">
                         </div>
                       </div>
                       <div class="gender-details">
-                        <input type="radio" name="gender" id="dot-1">
-                        <input type="radio" name="gender" id="dot-2">
-                        <input type="radio" name="gender" id="dot-3">
+                        <input type="radio" name="gender" id="dot-1" required>
+                        <input type="radio" name="gender" id="dot-2" required>
+                        <input type="radio" name="gender" id="dot-3" required>
                         <span class="gender-title">Género</span>
                         <div class="category">
                             <label for="dot-1">
@@ -117,18 +117,33 @@
             <img src="images/login.svg">
          </div>   
     </div>
-    <script>
-      const expresion = /[a-zA-Z0-9._-]+\@(hotmail|outlook|gmail|certus)\.(com|es)/;
-      function validar_correo(){
-        const correo_form = document.getElementById('correo').value;
-        const validar = expresion.test(correo_form);
-        if (validar === true) {
-          $('correo').removeClass('is-invalid').addClass('is-valid');
+    <script src="/js/app.js"></script>
+    <!--<script type="text/javascript">
+      function validation() {
+        var form = document.getElementById("form");
+        var email = document.getElementById("correo").value;
+        var text = document.getElementById("text");
+        var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+        if (email.match(pattern)) {
+          form.classList.add("valid");
+          form.classList.remove("invalid");
         } else {
-          $('correo').addClass('is-invalid');
+          form.classList.remove("valid");
+          form.classList.add("invalid");
         }
       }
-    </script>
+    </script>-->
+    <!--<script type="text/javascript">
+      function validarCorreo(correo){
+        var expReg= /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+        var ecValido = expReg.test(correo);
+        if (esValido == true) {
+          alert('Es válido');
+        } else {
+          alert('No lo es');
+        }
+      }
+    </script>-->
     <script>
       function maxlengthNumber (obj){
           console.log(obj.value);
@@ -136,6 +151,24 @@
               obj.value = obj.value.slice(0, obj.maxLength);
           }
       }
+  </script>
+  <script>
+    function SoloLetras(e){
+      key = e.KeyCode || e.which;
+      tecla = String.fromCharCode(key).toString();
+      letras ="ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyzáéíóú";
+
+      especiales = [8,13];
+      tecla_especial = false
+      for(var i in especiales){
+        if (key == especiales[i]) {
+          tecla_especial = true;
+          break;
+        }
+      }if (letras.indexOf(tecla) == -1 && !tecla_especial) {
+        return false;
+      }
+    }
   </script>
 </body>
 </html>
