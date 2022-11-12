@@ -53,7 +53,7 @@
                         </div>
                         <div class="inputBx">
                           <span class="details">Nombres y apellidos</span>
-                          <input type="text" id="nombre" placeholder="Ingresar tus nombres y apellidos" onkeypress="return SoloLetras(event);" name="nombre" required="" pattern="[a-zA-Zá-zÁ-Z]+" maxlength="50" onkeydown="if(this.value.length == /^[a-zA-ZÀ-ÿ\s]{1,40}$/) return false">
+                          <input type="text" id="nombre" placeholder="Ingresar tus nombres y apellidos" onkeypress="return SoloLetras(event);" name="nombre" required="" maxlength="50" >
                         </div>
                           <div class="inputBx">
                             <span class="details">Teléfono</span>
@@ -66,7 +66,7 @@
                         </div>--->
                         <div class="inputBx">
                           <span class="details">Email</span>
-                          <input type="text" id="correo" placeholder="Ingresar email"  onkeydown="validation()" name="correo" minlength="10" maxlength="50" required >
+                          <input type="text" id="correo" placeholder="Ingresar email" name="correo" minlength="10" maxlength="50" required ="">
                         </div>
                         <div class="inputBx">
                           <span class="details">Contraseña</span>
@@ -156,9 +156,9 @@
     function SoloLetras(e){
       key = e.KeyCode || e.which;
       tecla = String.fromCharCode(key).toString();
-      letras ="ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyzáéíóú";
+      letras ="ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyzáéíóú"," ";
 
-      especiales = [8,13];
+      especiales = [8,13,32];
       tecla_especial = false
       for(var i in especiales){
         if (key == especiales[i]) {
